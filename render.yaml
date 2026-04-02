@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: mphatso-chatbot
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: WHATSAPP_TOKEN
+        sync: false
+      - key: WHATSAPP_PHONE_ID
+        sync: false
+      - key: VERIFY_TOKEN
+        value: mphatso_verify_2024
